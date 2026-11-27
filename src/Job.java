@@ -1,40 +1,43 @@
 public class Job {
-    private String company;
-    private String role;
-    private double minimumPercentage;
-    private int maximumBacklogs;
-    private int requiredGraduationYear;
 
-    public Job(
-            String company,
-            String role,
-            double minimumPercentage,
-            int maximumBacklogs,
-            int requiredGraduationYear) {
-        this.company = company;
+    private String companyName;
+    private String role;
+    private double minPercentage;
+    private int maxBacklogs;
+    private int minGraduationYear;
+    private String[] requiredSkills;
+
+    public Job(String companyName, String role, double minPercentage,
+            int maxBacklogs, int minGraduationYear, String[] requiredSkills) {
+        this.companyName = companyName;
         this.role = role;
-        this.minimumPercentage = minimumPercentage;
-        this.maximumBacklogs = maximumBacklogs;
-        this.requiredGraduationYear = requiredGraduationYear;
+        this.minPercentage = minPercentage;
+        this.maxBacklogs = maxBacklogs;
+        this.minGraduationYear = minGraduationYear;
+        this.requiredSkills = requiredSkills;
     }
 
-    public String getCompany() {
-        return company;
+    public String getCompanyName() {
+        return companyName;
     }
 
     public String getRole() {
         return role;
     }
 
-    public double getMinimumPercentage() {
-        return minimumPercentage;
+    public double getMinPercentage() {
+        return minPercentage;
     }
 
-    public int getMaximumBacklogs() {
-        return maximumBacklogs;
+    public int getMaxBacklogs() {
+        return maxBacklogs;
     }
 
-    public int getRequiredGraduationYear() {
-        return requiredGraduationYear;
+    public int getMinGraduationYear() {
+        return minGraduationYear;
+    }
+
+    public String[] getRequiredSkills() {
+        return requiredSkills;
     }
 }
